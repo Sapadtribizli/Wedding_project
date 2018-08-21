@@ -9,13 +9,16 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 header{
   padding: 60px;
   text-align: center;
   font-family: 'Niconne', cursive;
   font-weight: normal;
-  max-width: 1200px;
-  margin: 0 auto;
   background: url('feet.jpg') center/cover;
   filter: sepia(40%);
   border-bottom: 2px solid  rgb(51, 8, 8);
@@ -27,9 +30,50 @@ h1, h2{
   text-shadow: 1px 1px 2px rgb(247, 224, 162);
 }
 
+nav {
+  display: flex;
+  border-bottom: 2px solid  rgb(51, 8, 8);
+  box-shadow:0 2px rgb(247, 224, 162), 0 3px rgb(51, 8, 8);
+  margin-bottom: 20px;
+}
+
+a {
+  padding: 40px 60px;
+  color: rgb(51, 8, 8);
+  text-decoration: none;
+  font-size: 24px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.rsvp {
+  font-weight: bold;
+  margin-left: auto;
+  background: rgb(51, 8, 8);
+  color: rgb(247, 224, 162);
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+ul {
+  margin: 20px;
+}
+
+
+@media screen and (max-width: 769px) {
+  a {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
 @media screen and (min-width: 1200px){
   header {
-    border-right: 2px solid  rgb(51, 8, 8);
-    border-left: 2px solid  rgb(51, 8, 8);
+    border-right: 1px solid  rgb(51, 8, 8);
+    border-left: 1px solid  rgb(51, 8, 8);
   }
 }
