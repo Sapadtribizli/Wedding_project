@@ -26,7 +26,25 @@
       RSVP
     </a>
   </nav>
-  <p>More information will be added soon!</p>
+  <p class="center">More information will be added soon!</p>
+  <div id="wedding-countdown" class="countdown">
+    <div>
+      <span class="number days"> </span>
+      <div class="text">Days</div>
+    </div>
+    <div>
+      <span class="number hours"> </span>
+      <div class="text">Hours</div>
+    </div>
+    <div>
+      <span class="number minutes"> </span>
+      <div class="text">Minutes</div>
+    </div>
+    <div>
+      <span class="number seconds"> </span>
+      <div class="text">Seconds</div>
+    </div>
+  </div>
   <h2 id="program">Program // Programma</h2>
   <ul>
     <li>13:00 - Rooms available and welcome / Inchecken en welkom</li>
@@ -41,7 +59,17 @@
   <p>Limited public transport options, please indicate on the RSVP that you need transportation!</p>
   <p>De locatie is niet goed bereikbaar per ov, geeft in dat geval aub aan op het RSVP formulier dat je transport nodig hebt!</p>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2718.8632993358997!2d19.343442815611056!3d47.04291317915127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47422849d624b8f1%3A0xd3573ae1592346b2!2sSarl%C3%B3spuszta+Club+Hotel!5e0!3m2!1snl!2shu!4v1534281816797" width="600" height="450" frameborder="0" style="width: 100%; border:0" allowfullscreen></iframe>
-
 </div>
+<script>
+  function updateCountdown() {
+    var clock = document.getElementById('wedding-countdown');
+    var diff = new Date(1537617600000) - new Date();
+    clock.querySelector('.days').innerHTML = Math.floor(diff / (1000 * 60 * 60 * 24));
+    clock.querySelector('.hours').innerHTML = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    clock.querySelector('.minutes').innerHTML =  Math.floor((diff / 1000 / 60) % 60);
+    clock.querySelector('.seconds').innerHTML = Math.floor((diff / 1000) % 60);
+  }
+  setInterval(updateCountdown, 1000);
+</script>
 </body>
 </html>
