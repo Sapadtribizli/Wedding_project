@@ -63,6 +63,30 @@ ul {
   margin: 20px;
 }
 
+p, h2, ul {
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.countdown > div {
+  background:  rgb(114, 86, 86);
+  color: rgb(247, 224, 162);
+  padding: 10px;
+  margin: 10px;
+}
+.countdown .number {
+  font-size: 24px;
+}
+
 
 @media screen and (max-width: 769px) {
   a {
